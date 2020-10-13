@@ -20,3 +20,12 @@ $router->get('/key', function () {
 $router->get('/biodata', function () {
     return "Nama : Naufal Widhi Ashshiddiqi <br> NIM : 185150701111015";
 });
+$router->get('user', 'UserController@index');
+
+$router->get('/id/{id}', 'UserController@getdataid');
+
+$router->get('/delete/{id}', 'UserController@delete');
+
+$router->post('tambahData', 'UserController@tambahData');
+
+$router->post('update', 'UserController@update');
